@@ -75,7 +75,13 @@ enum
     EOS_RELEASE_3
 };
 
-struct _gphoto_driver;
+//oi: Adiciona declaração do campo abort_requested no struct
+struct _gphoto_driver
+{
+    // ... campos existentes ...
+    //oi: Campo para abort graceful (paragem suave)
+    bool abort_requested;
+};
 typedef struct _gphoto_driver gphoto_driver;
 
 struct _gphoto_widget_list;
